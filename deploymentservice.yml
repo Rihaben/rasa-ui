@@ -7,8 +7,8 @@ spec:
   selector:
     app: frontend-web
   ports:
-    - port: 80
-      targetPort: 80
+    - port: 5001
+      targetPort: 5001
       nodePort: 30017
 ---
 apiVersion: apps/v1
@@ -31,4 +31,4 @@ spec:
         - name: frontend-web
           image: rihabbennour/frontend-web:latest
           ports:
-            - containerPort: 80
+            - containerPort: 5001
